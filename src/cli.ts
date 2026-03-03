@@ -36,7 +36,7 @@ async function discoverFiles(
 export function registerCli(api: OpenClawPluginApi): void {
   let pluginConfig: PluginConfig = {};
   try {
-    pluginConfig = api.getPluginConfig<PluginConfig>("canonical-agents");
+    pluginConfig = api.getPluginConfig<PluginConfig>("openclaw-canonical-agents");
   } catch {
     // not available outside of plugin context
   }
@@ -48,7 +48,7 @@ export function registerCli(api: OpenClawPluginApi): void {
   ];
 
   api.registerCli({
-    name: "canonical-agents",
+    name: "openclaw-canonical-agents",
     commands: [
       {
         name: "list",
@@ -122,7 +122,7 @@ export function registerCli(api: OpenClawPluginApi): void {
         args: [{ name: "path", required: true }],
         action(targetPath?: unknown) {
           if (typeof targetPath !== "string") {
-            console.error("Usage: canonical-agents preview <path>");
+            console.error("Usage: openclaw-canonical-agents preview <path>");
             return;
           }
           try {

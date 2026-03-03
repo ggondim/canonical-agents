@@ -1,10 +1,11 @@
 {
-  "name": "@canonical-agents/openclaw-plugin",
+  "name": "openclaw-canonical-agents",
   "version": "0.1.0",
   "type": "module",
   "description": "OpenClaw plugin that watches canonical agent files and provisions them via config reconciliation",
   "main": "src/index.ts",
   "scripts": {
+    "build": "tsc",
     "lint": "oxlint src",
     "format": "oxfmt src",
     "typecheck": "tsc --noEmit",

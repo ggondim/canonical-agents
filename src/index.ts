@@ -73,7 +73,7 @@ export default function register(api: OpenClawPluginApi): void {
 
   function getConfig(): PluginConfig {
     try {
-      return api.getPluginConfig<PluginConfig>("canonical-agents");
+      return api.getPluginConfig<PluginConfig>("openclaw-canonical-agents");
     } catch {
       return {};
     }

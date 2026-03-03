@@ -1,5 +1,5 @@
 {
-  "id": "canonical-agents",
+  "id": "openclaw-canonical-agents",
   "name": "Canonical Agents",
   "description": "Watches canonical agent files (.agent.md / AGENTS.md) and provisions them as OpenClaw agents via config reconciliation.",
   "version": "0.1.0",
