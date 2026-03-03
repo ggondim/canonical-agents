@@ -1,0 +1,25 @@
+{
+  "name": "@canonical-agents/openclaw-plugin",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "OpenClaw plugin that watches canonical agent files and provisions them via config reconciliation",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "oxlint src",
+    "format": "oxfmt src",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm typecheck && pnpm lint"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "gray-matter": "^4.0.3",
+    "json5": "^2.2.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
+    "typescript": "^5.9.3"
+  }
+}
