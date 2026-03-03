@@ -1,0 +1,40 @@
+{
+  "id": "canonical-agents",
+  "name": "Canonical Agents",
+  "description": "Watches canonical agent files (.agent.md / AGENTS.md) and provisions them as OpenClaw agents via config reconciliation.",
+  "version": "0.1.0",
+  "entrypoint": "src/index.ts",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable or disable the plugin."
+      },
+      "watchDirs": {
+        "type": "array",
+        "items": { "type": "string" },
+        "default": ["~/agents-repo"],
+        "description": "Directories to watch for agent files."
+      },
+      "filePattern": {
+        "type": "array",
+        "items": { "type": "string" },
+        "default": ["**/AGENTS.md", "**/*.agent.md"],
+        "description": "Glob patterns used to discover agent files inside watchDirs."
+      },
+      "debounceMs": {
+        "type": "number",
+        "default": 500,
+        "description": "Debounce interval (ms) for file-change events."
+      },
+      "defaultWorkspaceBase": {
+        "type": "string",
+        "default": "~/.openclaw/workspaces",
+        "description": "Base path for auto-generated workspaces when workspace is not specified in the agent file."
+      }
+    },
+    "additionalProperties": false
+  }
+}
